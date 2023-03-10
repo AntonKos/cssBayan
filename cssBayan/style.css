@@ -79,6 +79,7 @@ img{
 
 input:checked + .accordion-label::after {
   transform: rotate(90deg);
+  transition: 0.45s transform ease;
 }
 input:checked ~ .accordion-content {
   max-height: 40vh;
@@ -88,6 +89,7 @@ input:checked ~ .accordion-content {
 @media (max-width: 650px) {
   .accordion{
     color: white;
+    margin-bottom: 10px;
   }
   .accordion-label::after {
     color: white;
@@ -118,5 +120,9 @@ input:checked ~ .accordion-content {
   }
   .accordion-wrapper {
     width: 300px;
+  }
+  .accordion{
+    color: white;
+    margin-bottom: 5px;
   }
 }
