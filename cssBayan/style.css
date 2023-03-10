@@ -57,6 +57,7 @@ input {
   font-size: 2rem;
   text-align: center;
   transform: rotate(-45deg);
+  transition: 0.2s transform ease;
 }
 
 .accordion-content {
