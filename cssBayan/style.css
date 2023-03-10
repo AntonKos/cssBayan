@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   height: 200vh;
-  background: rgb(155, 155, 155);
+  background: rgb(203, 197, 197);
 }
 
 input {
@@ -86,11 +86,29 @@ input:checked ~ .accordion-content {
 }
 
 @media (max-width: 650px) {
+  .accordion{
+    color: white;
+  }
+  .accordion-label::after {
+    color: white;
+  }
   img{
     width: 300px;
   }
   .accordion-wrapper {
     width: 400px;
+  }
+  .accordion-label {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .accordion-label::after {
+    font-size: 1rem;
+  }
+  .accordion-content p{
+    font-size: 13px;
   }
 }
 
