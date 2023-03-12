@@ -11,29 +11,29 @@ input {
   z-index: -1;
 }
 
-.accordion-wrapper {
+.section-wrapper {
   border-radius: 1em;
   overflow: hidden;
   width: 60em;
   margin: 0 auto;
 }
 
-.accordion-wrapper:hover .accordion-label::after,.accordion-wrapper:hover .accordion{
+.section-wrapper:hover .section-label::after,.section-wrapper:hover .section{
   color: white;
 }
 
-.accordion {
+.section {
   width: 100%;
   color: rgb(9, 48, 112);
   overflow: hidden;
   margin-bottom: 1rem;
 }
 
-.accordion:last-child{
+.section:last-child{
   margin-bottom: 0;
 }
 
-.accordion-label {
+.section-label {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -43,21 +43,21 @@ input {
   font-size: 1.5rem;
 }
 
-.accordion-label:hover {
+.section-label:hover {
   background: rgb(156, 35, 255);
 }
 
-.accordion-label:hover ~ .accordion-content{
+.section-label:hover ~ .section-content{
   max-height: 40vh;
   padding: 1.6em;
 }
 
-.accordion:hover .accordion-label::after{
+.section:hover .section-label::after{
   transform: rotate(90deg);
   transition: 0.45s transform ease;
 }
 
-.accordion-label::after {
+.section-label::after {
   content: "×";
   color: rgba(204, 8, 197, 0.1);
   font-size: 2rem;
@@ -66,14 +66,14 @@ input {
   transition: 0.2s transform ease;
 }
 
-.accordion-content {
+.section-content {
   max-height: 0;
   padding: 0 1.6em;
   color: rgba(4,57,94,1);
   background: white;
   transition: all 0.5s;
 }
-.accordion-content p{
+.section-content p{
   margin: 0;
   color: rgba(4,57,94,.7);
   font-size: 1.8em;
@@ -83,39 +83,39 @@ img{
   width: 40em;
 }
 
-input:checked + .accordion-label::after {
+input:checked + .section-label::after {
   transform: rotate(90deg);
   transition: 0.45s transform ease;
 }
-input:checked ~ .accordion-content {
+input:checked ~ .section-content {
   max-height: 40vh;
   padding: 1.6em;
 }
 
 @media (max-width: 650px) {
-  .accordion{
+  .section{
     color: white;
     margin-bottom: 1em;
   }
-  .accordion-label::after {
+  .section-label::after {
     color: white;
   }
   img{
     width: 30em;
   }
-  .accordion-wrapper {
+  .section-wrapper {
     width: 40em;
   }
-  .accordion-label {
+  .section-label {
     padding: 1em;
     font-weight: bold;
     cursor: pointer;
     font-size: 1.5em;
   }
-  .accordion-label::after {
+  .section-label::after {
     font-size: 1rem;
   }
-  .accordion-content p{
+  .section-content p{
     font-size: 1.3em;
   }
 }
@@ -124,10 +124,10 @@ input:checked ~ .accordion-content {
   img{
     width: 20em;
   }
-  .accordion-wrapper {
+  .section-wrapper {
     width: 30em;
   }
-  .accordion{
+  .section{
     color: white;
     margin-bottom: 0.5em;
   }
