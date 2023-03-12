@@ -1,0 +1,134 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 200vh;
+  background: rgb(203, 197, 197);
+  font-size: 10px;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.section-wrapper {
+  border-radius: 1em;
+  overflow: hidden;
+  width: 60em;
+  margin: 0 auto;
+}
+
+.section-wrapper:hover .section-label::after,.section-wrapper:hover .section{
+  color: white;
+}
+
+.section {
+  width: 100%;
+  color: rgb(9, 48, 112);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.section:last-child{
+  margin-bottom: 0;
+}
+
+.section-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(204, 8, 197, 0.8);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.section-label:hover {
+  background: rgb(156, 35, 255);
+}
+
+.section-label:hover ~ .section-content{
+  max-height: 40vh;
+  padding: 1.6em;
+}
+
+.section:hover .section-label::after{
+  transform: rotate(90deg);
+  transition: 0.45s transform ease;
+}
+
+.section-label::after {
+  content: "×";
+  color: rgba(204, 8, 197, 0.1);
+  font-size: 2rem;
+  text-align: center;
+  transform: rotate(-45deg);
+  transition: 0.2s transform ease;
+}
+
+.section-content {
+  max-height: 0;
+  padding: 0 1.6em;
+  color: rgba(4,57,94,1);
+  background: white;
+  transition: all 0.5s;
+}
+.section-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  font-size: 1.8em;
+}
+
+img{
+  width: 40em;
+}
+
+input:checked + .section-label::after {
+  transform: rotate(90deg);
+  transition: 0.45s transform ease;
+}
+input:checked ~ .section-content {
+  max-height: 40vh;
+  padding: 1.6em;
+}
+
+@media (max-width: 650px) {
+  .section{
+    color: white;
+    margin-bottom: 1em;
+  }
+  .section-label::after {
+    color: white;
+  }
+  img{
+    width: 30em;
+  }
+  .section-wrapper {
+    width: 40em;
+  }
+  .section-label {
+    padding: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  .section-label::after {
+    font-size: 1rem;
+  }
+  .section-content p{
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 450px) {
+  img{
+    width: 20em;
+  }
+  .section-wrapper {
+    width: 30em;
+  }
+  .section{
+    color: white;
+    margin-bottom: 0.5em;
+  }
+}
